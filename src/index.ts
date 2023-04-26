@@ -54,7 +54,7 @@ client.on('messageCreate', async msg => {
 
 const pick = async (roleId: string, amount: number): Promise < string[] > => {
     try {
-        if(Number.isNaN(Number)) throw new Error('please enter a valid number'); 
+        if(Number.isNaN(Number) || amount < 0) throw new Error('please enter a valid number'); 
         
         let winners: string[] = [];
 
